@@ -37,7 +37,7 @@ public class CalculationService {
             String response = String.valueOf(future.get(5, TimeUnit.SECONDS));
 
             if (response.startsWith("ERROR:")) {
-                throw new ArithmeticException(response.substring(6)); // Remove "ERROR: " prefix
+                throw new ArithmeticException(response.substring(6)); 
             }
 
             return new BigDecimal(response);
